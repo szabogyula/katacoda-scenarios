@@ -1,6 +1,6 @@
 # Docker konténer futtatása
 
---hostname ${HOSTNAME}
+Futtassuk a konténert, becsatolva a megfelelő könyvtárakat.
 
 ```
 docker run -p 389:389 -p 636:636 --hostname ${HOSTNAME} --name ldap --detach \
@@ -10,10 +10,10 @@ docker run -p 389:389 -p 636:636 --hostname ${HOSTNAME} --name ldap --detach \
   sztaki/openldap-for-research-institutes:0.1.0
 ```{{execute}}
 
-
-`docker logs ldap`{{execute}}
-
-`docker start ldap`{{execute}}
+Nézzük az logokat:
 
 `docker logs -f ldap`{{execute}}
+
+
+ctrl+c leütésével ki lehet szállni a logok nézetéből.
 
