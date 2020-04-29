@@ -7,7 +7,10 @@ Klónozzuk le a git repository-t.
 Lépjünk be a repo-ba `cd ldap`{{execute}} és állítsuk be a docker image környezeti paramétereit.
 
 `cp environment/my-env.startup.yaml.dist environment/my-env.startup.yaml`{{execute}}
-`vim environment/my-env.startup.yaml`{{execute}}
+
+szerkesszük meg a környezeti paramétereket tartalmazó file-t
+
+environment/my-env.startup.yaml{{open}}
 
 buildeljük le a docker image-et.
 
