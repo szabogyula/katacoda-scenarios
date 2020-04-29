@@ -6,5 +6,5 @@ docker run --port 389:389 --port 636:636 --hostname ${HOSTNAME} --name ldap --de
   --volume /opt/ldap/config:/etc/ldap/slapd.d \
   --volume /opt/ldap/certs:/container/service/slapd/assets/certs \
   sztaki/openldap-for-research-institutes:0.1.0
-```
+```{{execute}}
 
