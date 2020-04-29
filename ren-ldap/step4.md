@@ -1,12 +1,14 @@
 # Populáció
 
+Nézzük meg, milyen struktúra készült el az ldapban.
+
 `docker exec ldap ldapsearch -x -H ldap://localhost -b dc=intezet,dc=hu -D "cn=admin,dc=intezet,dc=hu" -wadmin`{{execute}}
 
-Vizsgáljuk meg a tesztusereket az editorban. Van egy `admin`, akit a későbbiekben felruházhatunk admin jogosultságokkal.
+Vizsgáljuk meg, szükség esetén módosítsuk a tesztusereket az editorban. Van egy `admin`, akit a későbbiekben felruházhatunk admin jogosultságokkal.
 
 `ldap/testusers/user.ldif`{{open}}
 
-`cat testusers/user.ldif | docker exec ldap ldapmodify -x -H ldap://localhost -D "cn=admin,dc=intezet,dc=hu" -wadmin`{{execute}}
+`cat testusers/user.ldif | docker exec -i ldap ldapmodify -x -H ldap://localhost -D "cn=admin,dc=intezet,dc=hu" -wadmin`{{execute}}
 
 Vizsgáljuk meg az admin csoporthoz való rendelését az `ądmin` usernek. Nyissk meg a file-t az editorban, és írjuk át a megfelelő attribútumot.
 
@@ -14,7 +16,7 @@ Vizsgáljuk meg az admin csoporthoz való rendelését az `ądmin` usernek. Nyis
 
 Majd futtassuk le az ldapmodify-t az adatbázison.
 
-`cat admin.ldif | docker exec ldap ldapmodify -x -H ldap://localhost -D "cn=admin,dc=intezet,dc=hu" -wadmin`{{execute}}
+`cat admin.ldif | docker exec -i ldap ldapmodify -x -H ldap://localhost -D "cn=admin,dc=intezet,dc=hu" -wadmin`{{execute}}
 
 Listázzuk újra az ldap adatbázist.
 

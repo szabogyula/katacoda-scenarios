@@ -1,4 +1,4 @@
-# Build image
+# Repository klónozás és előkészítés
 
 Klónozzuk le a git repository-t.
 

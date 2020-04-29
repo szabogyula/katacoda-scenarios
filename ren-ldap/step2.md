@@ -1,4 +1,4 @@
-# Config and build image
+# Image konfigurálása és buildelése
 
 szerkesszük meg a környezeti paramétereket tartalmazó file-t
 

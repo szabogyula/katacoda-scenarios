@@ -4,6 +4,7 @@ Létre kell hozni a tanúsítványokat a konfigurációt és az ldap adatbázist
 
 `mkdir -p /opt/ldap/certs /opt/ldap/database /opt/ldap/config`{{execute}}
 
+A későbbiekben ezekről lesz érdemes biztonsági másolatat készíteni.
 
 # Docker konténer futtatása
 
@@ -17,10 +18,9 @@ docker run -p 389:389 -p 636:636 --hostname ${HOSTNAME} --name ldap --detach \
   sztaki/openldap-for-research-institutes:0.1.0
 ```{{execute}}
 
-Nézzük az logokat:
+Itt figyelhetjük meg a logokban, hogyan fut a telepítés, és a production környezet kialakítása
 
 `docker logs -f ldap`{{execute}}
-
 
 ctrl+c leütésével ki lehet szállni a logok nézetéből.
 
