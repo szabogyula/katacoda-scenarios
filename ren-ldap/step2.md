@@ -1,7 +1,10 @@
-# Futtató környezet kialakítása
+# Config and build image
 
-Létre kell hozni a tanúsítványokat a konfigurációt és az ldap adatbázist tartalmazó könyvtárakat.
+szerkesszük meg a környezeti paramétereket tartalmazó file-t
 
-`mkdir -p /opt/ldap/certs /opt/ldap/database /opt/ldap/config`{{execute}}
+`ldap/environment/my-env.startup.yaml`{{open}}
 
+buildeljük le a docker image-et.
+
+`make`{{execute}}
 
