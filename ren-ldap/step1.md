@@ -10,7 +10,7 @@ Lépjünk be a repo-ba `cd ldap`{{execute}} és állítsuk be a docker image kö
 
 szerkesszük meg a környezeti paramétereket tartalmazó file-t
 
-`environment/my-env.startup.yaml`{{open}}
+`ldap/environment/my-env.startup.yaml`{{open}}
 
 buildeljük le a docker image-et.
 
